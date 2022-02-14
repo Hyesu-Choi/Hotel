@@ -5,29 +5,184 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Hotel</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <title>Grande Hotel & Resorts</title>
 </head>
-<body>
-    <header>
-        <h1>Hotel</h1>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Hotel Overview</a></li>
-                <li><a href="#">Accommodations</a></li>
-                <li><a href="#">Photos & Videos</a></li>
-                <li><a href="#">Dining</a></li>
-                <li><a href="#">Offers</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="home" id="home">
-            <video src="img/Four Seasons Hotel George V, Paris.mp4" loop muted autoplay></video>
-        </section>
-        <section class="offers">Offers</section>
-    </main>
 
+<body>
+    <header class="header">
+        <div class="header-top">
+            <h1><a href="index.html"><img src="img/logo.png" alt=""></a></h1>
+            <div class="header-top-box">
+                <div class="member">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">예약조회</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <div class="sns">
+                    <ul>
+                        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-instagram' ></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">About Grande</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">호텔소개</a></li>
+                            <li><a href="#">오시는길</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Special Offers</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">객실 프로모션</a></li>
+                            <li><a href="#">다이닝</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Rooms</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">디럭스</a></li>
+                            <li><a href="#">코너디럭스</a></li>
+                            <li><a href="#">패밀리스위트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Dining</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">파노라마</a></li>
+                            <li><a href="#">Beyond</a></li>
+                            <li><a href="#">Chi Chi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Facilities</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">인피니티풀</a></li>
+                            <li><a href="#">스파</a></li>
+                            <li><a href="#">피트니스 센터</a></li>
+                            <li><a href="#">미팅홀</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <video src="img/Four Seasons Hotel George V, Paris.mp4" loop muted autoplay></video>
+    </section>
+
+    <section class="booking">
+        <form>
+            <div class="booking-item">
+                <label for="">호텔 또는 도시</label>
+                <input type="text">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="booking-item">
+                <label for="">체크인</label>
+                <input type="date">
+            </div>
+            <div class="booking-item">
+                <label for="">체크아웃</label>
+                <input type="date">
+            </div>
+            <div class="booking-item">
+                <label for="">성인</label>
+                <select name="adult">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                </select>
+            </div>
+            <div class="booking-item">
+                <label for="">어린이</label>
+                <select name="adult">
+                    <option value="">0</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                </select>
+            </div>
+            <a href="#">검색</a>
+        </form>
+    </section>
+
+    <section class="offers">
+        <h1>스페셜 오퍼</h1>
+        <p>Special Offers</p>
+        <a href="#">더보기   +</a>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="offer-item swiper-slide">
+                    <h3>Happy Valentine</h3>
+                    <p>숙박 시 고디바 골드컬렉션 증정(2/12~2/14 투숙 고객 한정)</p>
+                </div>
+                <div class="offer-item swiper-slide">
+                    <h3>썸머 대형베어 '조이' 포토존 이벤트</h3>
+                    <p>귀여운 썸머 대형베어 '조이'와 함께 행복한 여름 호캉스 인증샷을 남겨주세요</p>
+                </div>
+                <div class="offer-item swiper-slide">
+                    <h3>조식 뷔페 신메뉴 출시</h3>
+                    <p>조식 뷔페 신메뉴와 함께 활기찬 아침을 시작해보세요</p>
+                </div>
+                <div class="offer-item swiper-slide">
+                    <h3>7박 투숙 시, 1박 무료 숙박권 증정</h3>
+                    <p>회원 대상 홈페이지 예약 시 적용</p>
+                </div>
+                <div class="offer-item swiper-slide">
+                    <h3>New Year Limited</h3>
+                    <p>리미티드 굿즈와 함께 호캉스를 즐기며 특별한 추억을 만들어보세요.</p>
+                </div>
+                <div class="offer-item swiper-slide">
+                    <h3>Sweetie, It's Sweet Day!</h3>
+                    <p>패키지 구매 시, 본샹스 모스카토 로제 와인 1병 + 미니 컵 솜사탕 1개 + 트리앤씨 배쓰밤 1개 증정</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="rooms">
+
+    </section>
+
+    <section class="gallery">
+        <h1>시설 미리보기</h1>
+        <div class="gallery-wrap">
+            <div class="img-1"></div> 
+            <div class="img-2"></div> 
+            <div class="img-3"></div> 
+            <div class="img-4"></div> 
+            <div class="img-5"></div> 
+            <div class="img-6"></div> 
+            <div class="img-7"></div> 
+        </div>
+    </section>
+    <footer class="footer">
+        <h1><a href="index.html"><img src="img/logo.png" alt=""></a></h1>
+        <p>광주 북구 중흥로140번길 19</p>
+        <p>Tel : 062-514-1988</p>
+        <p>https://gwangjugoodchoice.modoo.at</p>
+        <p>Copyright © Grande Hotel and Resorts CO., LTD. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     
 </body>

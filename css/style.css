@@ -1,17 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
+/* ===== RESET =====  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-size: 14px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* ===== 재사용코드 ===== */
 
-header {
-  position: fixed;
+/* ===== HEADER =====  */
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header-top {
+  height: 100px;
+  padding: 0 30px;
+}
+.header-top h1 {
+  position: absolute;
+  left: 42%;
+  top: 15px;
+}
+.header-top h1 img {
+  width: 230px;
+}
+
+.header-top-box {
+  height: 100%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.header-top-box li {
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+}
+.header-top-box .member li:hover a {
+  border-bottom: 3px solid blue;
+  border-radius: 2px;
+}
+.header-top-box li a {
+  color: #222;
+  padding: 5px 10px;
+}
+.header-top .sns li {
+  font-size: 2rem;
+}
+.header-top .sns li a:hover {
+  color: rgb(255, 72, 0);
+}
+
+.header-bottom {
+  background: #f2f2f2;
+}
+.nav > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav > ul > li {
+  position: relative;
+  padding: 25px 0;
+  width: 25%;
+  text-align: center;
+}
+.nav > ul > li > a {
+  color: #333;
+  text-transform: uppercase;
+}
+.nav > ul > li:hover > a {
+  color: orange;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.sub-menu {
+  position: absolute;
+  top: 66px;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  z-index: 9;
+  display: none;
+}
+.sub-menu::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 250px;
+  background: #ffff;
+  z-index: -1;
 }
+.sub-menu li {
+  display: block;
+  padding: 20px 0;
+}
+.sub-menu li a {
+  color: #333;
+}
+.sub-menu li:hover a {
+  color: orange;
+  font-weight: bold;
+}
+
+/* ===== HOME =====  */
 .home {
   width: 100%;
-  max-height: 100vh;
+  max-height: 80vh;
   overflow: hidden;
 }
 .home video {
@@ -19,8 +131,224 @@ header {
   display: block;
 }
 
+/* ===== 예약 =====  */
+.booking {
+  width: 100%;
+  background: #f2f2f2;
+  padding: 50px 100px;
+}
+.booking form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.booking label {
+  display: block;
+  margin-bottom: 17px;
+}
+.booking input {
+  padding: 5px 0;
+  width: 12rem;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #666;
+}
+.booking-item:nth-child(1) {
+  position: relative;
+}
+.booking-item:nth-child(1) i {
+  position: absolute;
+  top: 38px;
+  right: 10px;
+  font-size: 1.2rem;
+}
+.booking select {
+  padding: 5px 0;
+  width: 5rem;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #666;
+}
+.booking a {
+  padding: 15px 40px;
+  background: orange;
+  color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* ----- 스페셜 오퍼 -----  */
 .offers {
   width: 100%;
-  height: 100vh;
-  background: pink;
+  padding: 5rem;
+}
+.offers h1,
+.offers > p {
+  text-align: center;
+}
+.offers h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  position: relative;
+}
+.offers h1::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 39%;
+  width: 300px;
+  height: 1px;
+  background: #666;
+}
+.offers p {
+  color: #666;
+}
+.offers > a {
+  display: block;
+  text-align: end;
+  font-weight: bold;
+  padding: 20px 10px;
+  margin-right: 20px;
+  color: orange;
+}
+.swiper {
+  width: 100%;
+  height: 70vh;
+}
+
+.offer-item:nth-child(1) {
+  background: url(../img/offer1.jpg) no-repeat center;
+  background-size: cover;
+}
+.offer-item:nth-child(2) {
+  background: url(../img/offer2.jpg) no-repeat center;
+  background-size: cover;
+}
+.offer-item:nth-child(3) {
+  background: url(../img/offer3.jpg) no-repeat center;
+  background-size: cover;
+}
+.offer-item:nth-child(4) {
+  background: url(../img/offer4.jpg) no-repeat center;
+  background-size: cover;
+}
+.offer-item:nth-child(5) {
+  background: url(../img/offer5.jpg) no-repeat center;
+  background-size: cover;
+}
+.offer-item:nth-child(6) {
+  background: url(../img/offer6.jpg) no-repeat center;
+  background-size: cover;
+}
+.swiper-pagination-bullet {
+  background: orange !important;
+}
+.offer-item h3 {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  font-size: 26px;
+  color: #fff;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  z-index: 9;
+}
+.offer-item p {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  width: 80%;
+  color: #fff;
+  font-size: 20px;
+  z-index: 9;
+}
+
+/* ----- 갤러리 -----  */
+.gallery {
+  width: 100%;
+  padding: 5rem;
+}
+.gallery h1 {
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 30px;
+  position: relative;
+}
+
+.gallery h1::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 39%;
+  width: 300px;
+  height: 1px;
+  background: #666;
+}
+.gallery-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "img-1 img-1 img-2"
+    "img-3 img-4 img-4"
+    "img-5 img-6 img-7";
+}
+
+.img-1 {
+  grid-area: img-1;
+  min-height: 20rem;
+  background: url(../img/beyond1.jpg) no-repeat center;
+  background-size: cover;
+}
+.img-2 {
+  grid-area: img-2;
+  min-height: 20rem;
+  background: url(../img/corner_deluxe1.jpg) no-repeat center;
+  background-size: cover;
+}
+.img-3 {
+  grid-area: img-3;
+  min-height: 25rem;
+  background: url(../img/infinity4.jpg) no-repeat center;
+  background-size: cover;
+}
+.img-4 {
+  grid-area: img-4;
+  min-height: 25rem;
+  background: url(../img/spa1.jpg) no-repeat center;
+  background-size: cover;
+}
+.img-5 {
+  grid-area: img-5;
+  min-height: 15rem;
+  background: url(../img/symphony1.jpg) no-repeat center;
+  background-size: cover;
+}
+.img-6 {
+  grid-area: img-6;
+  min-height: 15rem;
+  background: url(../img/panorama1.jpg) no-repeat center;
+  background-size: cover;
+}
+.img-7 {
+  grid-area: img-7;
+  min-height: 15rem;
+  background: url(../img/family_suite1.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/* ----- 푸터 -----  */
+.footer {
+  width: 100%;
+  padding: 5rem;
+  background: #f2f2f2;
+  text-align: center;
+}
+.footer h1 {
+  line-height: 50px;
+}
+.footer h1 img {
+  width: 200px;
+}
+.footer p {
+  line-height: 30px;
 }
