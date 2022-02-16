@@ -8,3 +8,11 @@ let swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
+
+
+  var swiper2 = new Swiper(".rooms-swiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });

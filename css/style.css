@@ -30,12 +30,8 @@ a {
 .header-top h1 {
   position: absolute;
   left: 42%;
-  top: 15px;
+  top: 10px;
 }
-.header-top h1 img {
-  width: 230px;
-}
-
 .header-top-box {
   height: 100%;
   float: right;
@@ -51,7 +47,7 @@ a {
   cursor: pointer;
 }
 .header-top-box .member li:hover a {
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid orange;
   border-radius: 2px;
 }
 .header-top-box li a {
@@ -87,6 +83,9 @@ a {
   color: orange;
   font-weight: bold;
   transition: all 0.3s;
+}
+.nav:hover .sub-menu {
+  display: block;
 }
 .sub-menu {
   position: absolute;
@@ -261,6 +260,92 @@ a {
   z-index: 9;
 }
 
+/* ----- 객실 -----  */
+.rooms {
+  width: 100%;
+  padding: 5rem;
+}
+
+.rooms h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+.rooms h1::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 39%;
+  width: 300px;
+  height: 1px;
+  background: #666;
+}
+
+.rooms > a {
+  display: block;
+  text-align: end;
+  font-weight: bold;
+  padding: 20px 10px;
+  margin-right: 20px;
+  color: orange;
+}
+.rooms-item:nth-child(1) {
+  background: url(../img/deluxe.jpg) no-repeat center;
+  background-size: cover;
+}
+.rooms-item:nth-child(2) {
+  background: url(../img/corner_deluxe.jpg) no-repeat center;
+  background-size: cover;
+}
+.rooms-item:nth-child(3) {
+  background: url(../img/family_suite.jpg) no-repeat center;
+  background-size: cover;
+}
+.rooms-item:nth-child(4) {
+  background: url(../img/yerae_suite.jpg) no-repeat center;
+  background-size: cover;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: orange !important;
+}
+.rooms-item {
+  position: relative;
+}
+.rooms-item:hover::after {
+  width: 100%;
+}
+.rooms-item:hover .rooms-card {
+  opacity: 1;
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.rooms-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 70%;
+  width: -100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transform: skew(-45deg);
+}
+.rooms-card {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  color: #fff;
+  z-index: 9;
+  opacity: 0;
+}
+.rooms-card h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.rooms-card p {
+  font-size: 20px;
+}
 /* ----- 갤러리 -----  */
 .gallery {
   width: 100%;
@@ -292,47 +377,76 @@ a {
     "img-3 img-4 img-4"
     "img-5 img-6 img-7";
 }
-
+.gallery-wrap > div {
+  position: relative;
+}
+.gallery-wrap > div:hover > h2 {
+  opacity: 1;
+}
+.gallery-wrap > div > h2 {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  position: relative;
+  color: #fff;
+  opacity: 0;
+}
+.gallery-wrap h2::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  border: 1px solid #fff;
+  width: 90%;
+  height: 90%;
+}
 .img-1 {
   grid-area: img-1;
   min-height: 20rem;
-  background: url(../img/beyond1.jpg) no-repeat center;
+  background: url(../img/infinity.jpg) no-repeat center;
   background-size: cover;
 }
 .img-2 {
   grid-area: img-2;
   min-height: 20rem;
-  background: url(../img/corner_deluxe1.jpg) no-repeat center;
+  background: url(../img/chichi.jpg) no-repeat center;
   background-size: cover;
 }
 .img-3 {
   grid-area: img-3;
   min-height: 25rem;
-  background: url(../img/infinity4.jpg) no-repeat center;
+  background: url(../img/beyond.jpg) no-repeat center;
   background-size: cover;
 }
 .img-4 {
   grid-area: img-4;
   min-height: 25rem;
-  background: url(../img/spa1.jpg) no-repeat center;
+  background: url(../img/spa.jpg) no-repeat center;
   background-size: cover;
 }
 .img-5 {
   grid-area: img-5;
   min-height: 15rem;
-  background: url(../img/symphony1.jpg) no-repeat center;
+  background: url(../img/symphony.jpg) no-repeat center;
   background-size: cover;
 }
 .img-6 {
   grid-area: img-6;
   min-height: 15rem;
-  background: url(../img/panorama1.jpg) no-repeat center;
+  background: url(../img/panorama.jpg) no-repeat center;
   background-size: cover;
 }
 .img-7 {
   grid-area: img-7;
   min-height: 15rem;
-  background: url(../img/family_suite1.jpg) no-repeat center;
+  background: url(../img/fitness.jpg) no-repeat center;
   background-size: cover;
 }
 
