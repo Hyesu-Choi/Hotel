@@ -16,3 +16,18 @@ let swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+
+  $('.header-bottom').hover(function(){
+    $('.sub-menu').stop().slideDown();
+  }, function(){
+    $('.sub-menu').stop().slideUp();
+  });
+
+
+  // $('nav > ul > li').hover(function(){
+  //   $(this).find('.sub-menu').stop().slideDown();
+  // }, function(){
+  //   $('.sub-menu').stop().slideUp();
+  // });
+

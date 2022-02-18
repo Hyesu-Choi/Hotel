@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation on scroll</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box;}
+     body{
+    width: 100%;
+    height: 800vh;
+    }
+    #main{
+    position:absolute;
+    width: 60%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .box{
+    width:200px;
+    height: 250px;
+    display:inline-block;
+    overflow:hidden;
+    }
+    .letter{
+    font-family: fantasy;
+    font-size: 8cm;
+    line-height: 250px;
+    position:relative;
+    left:-160px;
+    transition: all .25s linear;
+    }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="box">
+          <div class="letter">D</div>
+        </div>
+        <div class="box">
+          <div class="letter">A</div>
+        </div>
+        <div class="box">
+          <div class="letter">F</div>
+        </div>
+        <div class="box">
+          <div class="letter">T</div>
+        </div>
+      </div>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script>
+        $(document).scroll(function(){
+        var scroll = $(window).scrollTop();
+        var amount = -160+(scroll*0.8);
+        if (amount < 10)
+        {
+            $('.letter').css({left:amount+"px"});
+        }
+        });
+      </script>
+</body>
+</html>
