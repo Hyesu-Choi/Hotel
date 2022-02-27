@@ -598,6 +598,7 @@ a {
   .header-top {
     height: 80px;
     padding: 0 20px;
+    margin-top: 45px;
   }
   .header-top h1 {
     position: inherit;
@@ -606,18 +607,20 @@ a {
     width: 170px;
   }
   .header-top-box {
-    height: 100%;
-    float: right;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    display: none;
+    justify-content: space-between;
+    flex-direction: row;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    padding: 0.3rem 1rem;
   }
   .header-top-box li {
     display: inline-block;
-    padding: 5px;
+    padding: 0;
     cursor: pointer;
   }
   .header-top-box .member li:hover a {
@@ -626,39 +629,63 @@ a {
   }
   .header-top-box li a {
     color: #222;
-    padding: 5px 10px;
+    padding: 5px;
   }
   .header-top .sns li {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
   .header-top .sns li a:hover {
     color: rgb(255, 72, 0);
   }
   .menu-bar {
     display: block;
-    font-size: 35px;
+    font-size: 40px;
+    position: relative;
+    width: 35px;
+    height: 35px;
+  }
+  .menu-bar i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #555;
+  }
+  .menu-bar .bx-x {
+    display: none;
+  }
+  .bx-menu.open {
+    display: none;
+  }
+  .bx-x.open {
+    display: block;
+  }
+  .nav.open-menu {
+    display: block;
   }
 
-  .header-bottom {
+  .nav-mob {
     position: absolute;
-    top: 80px;
+    top: 110px;
     right: 0;
     width: 100%;
-    height: auto;
-    background: pink;
+    background: #fff;
     z-index: 99;
     display: none;
   }
-  .nav > ul {
+  .nav-mob > ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5% 0;
   }
-  .nav > ul > li {
-    position: relative;
-    padding: 25px 0;
+  .nav-mob > ul > li {
+    padding: 0;
     width: 100%;
     text-align: center;
+    margin-bottom: 10px;
+  }
+  .nav-mob > ul > li > a {
+    font-size: 20px;
   }
 
   .nav > ul > li:hover > a {
@@ -666,25 +693,27 @@ a {
     font-weight: bold;
     transition: all 0.3s;
   }
-  /* .nav:hover .sub-menu {
-    display: block;
-  } */
   .sub-menu {
-    position: absolute;
-    top: 66px;
-    left: 0;
-    background: #fff;
+    height: auto;
+  }
+
+  .sub-menu-mob {
+    display: none;
+    position: inherit;
+    top: 0;
+    height: fit-content;
     width: 100%;
     text-align: center;
-    z-index: 9;
   }
-  .sub-menu::before {
-    display: none;
-  }
-  .sub-menu li {
+  .sub-menu-mob li {
     display: block;
-    padding: 20px 0;
+    padding: 10px 0;
   }
+
+  .home {
+    margin-top: 10px;
+  }
+
   .booking {
     padding: 25px 30px;
   }
@@ -694,7 +723,6 @@ a {
   .booking a {
     padding: 10px 35px;
   }
-
   .offers,
   .rooms,
   .gallery {
